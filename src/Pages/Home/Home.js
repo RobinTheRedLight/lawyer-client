@@ -10,33 +10,13 @@ const Home = () => {
 
             <div className='col-span-8 border-2 border-white rounded-lg'>
                 <div className='p-2'>
-                    <div className="carousel">
-                        <div id="slide1" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full" />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide4" className="btn btn-circle">❮</a>
-                                <a href="#slide2" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide2" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full" />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide1" className="btn btn-circle">❮</a>
-                                <a href="#slide3" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide3" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full" />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide2" className="btn btn-circle">❮</a>
-                                <a href="#slide4" className="btn btn-circle">❯</a>
-                            </div>
-                        </div>
-                        <div id="slide4" className="carousel-item relative w-full">
-                            <img src="https://placeimg.com/800/200/arch" className="w-full" />
-                            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                                <a href="#slide3" className="btn btn-circle">❮</a>
-                                <a href="#slide1" className="btn btn-circle">❯</a>
+                    <div className="hero h-96" style={{ backgroundImage: `url("1.jpg")` }}>
+                        <div className="hero-overlay bg-opacity-60"></div>
+                        <div className="hero-content text-center text-neutral-content">
+                            <div className="max-w-md">
+                                <h1 className="text-slate-200 mb-5 text-5xl font-bold">Robin's Law Desk</h1>
+                                <p className="font-mono text-slate-200 mb-5">Our goal is to provide high-quality legal services that help our clients to achieve their goals and resolve their legal issues.</p>
+
                             </div>
                         </div>
                     </div>

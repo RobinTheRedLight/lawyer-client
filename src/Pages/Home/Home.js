@@ -32,27 +32,25 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
+                    <div className='border-2 border-white rounded-lg'>
+                        <div className="p-5 stats stats-vertical lg:stats-horizontal shadow w-full">
 
-                    <div className="stats stats-vertical lg:stats-horizontal shadow">
+                            <div className="stat">
+                                <div className="stat-title">Clients</div>
+                                <div className="stat-value">500+</div>
+                            </div>
 
-                        <div className="stat">
-                            <div className="stat-title">Downloads</div>
-                            <div className="stat-value">31K</div>
-                            <div className="stat-desc">Jan 1st - Feb 1st</div>
+                            <div className="stat">
+                                <div className="stat-title">Cases</div>
+                                <div className="stat-value">1000+</div>
+                            </div>
+
+                            <div className="stat">
+                                <div className="stat-title">Solved</div>
+                                <div className="stat-value">800+</div>
+                            </div>
+
                         </div>
-
-                        <div className="stat">
-                            <div className="stat-title">New Users</div>
-                            <div className="stat-value">4,200</div>
-                            <div className="stat-desc">↗︎ 400 (22%)</div>
-                        </div>
-
-                        <div className="stat">
-                            <div className="stat-title">New Registers</div>
-                            <div className="stat-value">1,200</div>
-                            <div className="stat-desc">↘︎ 90 (14%)</div>
-                        </div>
-
                     </div>
 
                 </div>
@@ -70,7 +68,7 @@ const Home = () => {
                             <div className='py-2' key={data._id}>
                                 <div className='border-2 border-white rounded-lg'>
                                     <div className="card  bg-base-100 shadow-xl">
-                                        <figure className="px-10 pt-10">
+                                        <figure className="px-2 pt-2">
                                             <PhotoProvider>
                                                 <div className="foo">
                                                     <PhotoView src={data.picture}>

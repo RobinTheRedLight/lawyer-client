@@ -127,7 +127,10 @@ const Home = () => {
 
                                         </figure>
                                         <div className="card-body items-center text-justify pb-3">
-                                            <h2 className="font-mono card-title">{data.name}</h2>
+                                            <div className='grid  grid-cols-5 gap-3'>
+                                                <h2 className="font-mono card-title col-span-3">{data.name}</h2>
+                                                <p className='font-mono col-span-2'>(Fee: {data.price})</p>
+                                            </div>
                                             <p className='font-serif'>
                                                 {
                                                     data.description.length > 100 ? data.description.slice(0, 100) + '...' :
@@ -135,7 +138,9 @@ const Home = () => {
                                                 }
                                             </p>
                                             <div className="card-actions">
-                                                <button className="btn btn-primary">View Details</button>
+                                                <Link to={`/services/${data._id}`}>
+                                                    <button className="btn btn-primary">View Details</button>
+                                                </Link>
                                             </div>
                                         </div>
                                     </div>
@@ -144,8 +149,8 @@ const Home = () => {
                         )
                     }
                 </div>
-                <div className='py-2'>
-                    <button className="w-96 btn btn-primary border-2 border-white rounded-lg">See All</button>
+                <div>
+                    <Link to={'/services'}><button className="w-96 btn btn-primary border-2 border-white rounded-lg">See All</button></Link>
                 </div>
             </div>
 

@@ -46,7 +46,7 @@ const Header = () => {
                                         user?.uid ?
                                             <>
                                                 <Link onClick={handleLogOut} className=' pt-3 block'>Logout</Link>
-                                                <Link className='pt-3' to='/reviews'>My reviews</Link>
+                                                <Link className='pt-3' to='/review'>My reviews</Link>
                                                 <Link className='pt-3' to='/addservice'>Add service</Link>
 
                                             </>
@@ -92,7 +92,7 @@ const Header = () => {
                                 user?.uid ?
                                     <>
                                         <Link onClick={handleLogOut} className=' text-xl pt-1 px-3'>Logout</Link>
-                                        <Link className=' text-xl pt-1 px-3' to='/reviews'>My reviews</Link>
+                                        <Link className=' text-xl pt-1 px-3' to='/review'>My reviews</Link>
                                         <Link className=' text-xl pt-1 px-3' to='/addservice'>Add service</Link>
                                     </>
                                     :

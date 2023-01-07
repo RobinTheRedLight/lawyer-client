@@ -2,10 +2,12 @@ import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Registration = () => {
+    useTitle('Register');
     const [error, setError] = useState('');
-    const { createUser, updateUserProfile } = useContext(AuthContext);
+    const { createUser, updateUserProfile, loading } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -49,7 +51,12 @@ const Registration = () => {
             .then(() => { })
             .catch(error => console.error(error));
     }
+    if (loading) {
+        return <div className="radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }}>
+            70%
+        </div>
 
+    }
     return (
 
         <div className='text-center p-5'>

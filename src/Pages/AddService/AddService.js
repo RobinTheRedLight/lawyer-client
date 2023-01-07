@@ -1,10 +1,11 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const AddService = () => {
     const allService = useLoaderData();
-
+    useTitle('Add Service');
     const handleAddService = (sdata) => {
         const { _id, price, picture, name, description } = sdata;
         console.log(_id, price, picture, name, description);

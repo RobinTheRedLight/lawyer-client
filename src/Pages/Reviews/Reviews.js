@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 
 const Reviews = () => {
+    useTitle('Reviews');
     const [reviewData, setreviewData] = useState([]);
     const { user, loading } = useContext(AuthContext);
 
@@ -15,7 +16,10 @@ const Reviews = () => {
     }, [loading])
 
     if (loading) {
-        return <h1 className='text-5xl flex items-center justify-center'>Loading...</h1>
+        return <div className="radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }}>
+            70%
+        </div>
+
     }
 
     const handleDelete = id => {

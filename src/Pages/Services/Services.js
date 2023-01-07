@@ -1,8 +1,10 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link, useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 
 const Services = () => {
+    useTitle('All Services');
     const allServices = useLoaderData();
     return (
             <div className='p-2 grid grid-cols-3 gap-4'>

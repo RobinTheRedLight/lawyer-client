@@ -4,11 +4,12 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import { FaGoogle } from 'react-icons/fa';
+import useTitle from '../../hooks/useTitle';
 
 const LoginPage = () => {
     const [error, setError] = useState('');
-
-    const { signIn, setLoading, providerLogin } = useContext(AuthContext);
+    useTitle('Login');
+    const { signIn, setLoading, providerLogin, loading } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
 
     const navigate = useNavigate();
@@ -58,7 +59,12 @@ const LoginPage = () => {
                 setLoading(false);
             })
     }
+    if (loading) {
+        return <div className="radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }}>
+            70%
+        </div>
 
+    }
     return (
         <div className='p-5'>
             <div className='text-center'>

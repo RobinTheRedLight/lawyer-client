@@ -1,12 +1,14 @@
 import React, { useRef, useContext, useState, useEffect } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../hooks/useTitle';
 
 const Service = () => {
+    useTitle('Service');
     const [reviewData, setreviewData] = useState([]);
     const componentRef = useRef();
     const singleService = useLoaderData();
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
 
     const url = `http://localhost:5000/reviews?serviceName=${singleService.name}`;
 
@@ -49,6 +51,13 @@ const Service = () => {
                 }
             })
             .catch(er => console.error(er));
+    }
+
+    if (loading) {
+        return <div className="radial-progress" style={{ "--value": "70", "--size": "12rem", "--thickness": "2px" }}>
+            70%
+        </div>
+
     }
 
     return (
